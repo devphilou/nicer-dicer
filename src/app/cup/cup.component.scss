@@ -1,0 +1,32 @@
+$cup: #b86139da;
+$green: #29a57c;
+
+.cup {
+    width: 200px;
+    border-top: 300px solid $cup;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-radius: 12px;
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        background: $cup;
+    }
+    &:before {
+        width: 170px;
+        height: 30px;
+        top: -280px;
+        left: -35px;
+        border-radius: 3px;
+        box-shadow: 0 2px 0 rgba(#dedbd2, 0.5);
+    }
+    &:after {
+        width: 140px;
+        height: 20px;
+        top: -300px;
+        left: -20px;
+        border-radius: 2px;
+    }
+}
