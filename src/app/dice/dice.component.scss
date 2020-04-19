@@ -1,0 +1,52 @@
+$theme-color: tomato;
+
+.dice {
+    min-width: 80px;
+    height: 80px;
+    border: solid 2px $theme-color;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $theme-color;
+
+    &-one {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-two {
+        .dice__dot:nth-of-type(1) {
+            align-self: flex-end;
+        }
+    }
+
+    &-three {
+        .dice__dot:nth-of-type(1) {
+            align-self: flex-end;
+        }
+        .dice__dot:nth-of-type(2) {
+            align-self: center;
+        }
+    }
+
+    &-five {
+        > .dice__dot {
+            align-self: center;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__dot {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+    }
+}
