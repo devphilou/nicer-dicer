@@ -8,12 +8,6 @@ $green: #29a57c;
     border-right: 50px solid transparent;
     border-radius: 12px;
 
-    &:before,
-    &:after {
-        position: absolute;
-        content: '';
-        background: $cup;
-    }
     &:before {
         width: 170px;
         height: 30px;
