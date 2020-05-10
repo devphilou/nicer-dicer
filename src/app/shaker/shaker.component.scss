@@ -1,0 +1,89 @@
+$theme-color: tomato;
+
+.shaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    &__navbar {
+        width: 100%;
+        background-color: $theme-color;
+        padding: 15px 0;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+
+        button {
+            min-width: 100px;
+            color: $theme-color;
+            padding: 16px;
+            border-radius: 6px;
+            background-color: white;
+            border: solid 2px $theme-color;
+            cursor: pointer;
+            outline: none;
+            margin: 0 24px;
+        }
+
+        button:hover {
+            background-color: $theme-color;
+            color: white;
+            border: solid 2px white;
+        }
+
+        // button:active,
+        // button:focus {
+        //     animation: shake 0.5s;
+        //     // animation-iteration-count: infinite;
+        // }
+    }
+
+    app-cup {
+        margin-top: 100px;
+    }
+
+    app-cup.cup-shake {
+        animation: shake 0.5s infinite;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}

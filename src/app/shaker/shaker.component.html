@@ -1,0 +1,15 @@
+<div class="shaker">
+    <div class="shaker__navbar">
+        <button #shakeButton (click)="shake()">
+            {{ dices.length === 0 ? 'Shake' : 'Shake again' }}
+        </button>
+        <button #resetButton (click)="reset()">Reset</button>
+    </div>
+
+    <app-cup [ngClass]="{ 'cup-shake': shakeDices }" *ngIf="shakeDices || dices.length === 0"></app-cup>
+
+    <ng-container *ngIf="!shakeDices">
+        <!-- <app-dice *ngFor="let dice of dices" [diceNumber]="dice"></app-dice> -->
+        <app-fancy-dice *ngFor="let dice of dices"></app-fancy-dice>
+    </ng-container>
+</div>
